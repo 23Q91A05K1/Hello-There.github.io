@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supercar Facts</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            text-align: center;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Supercar Facts</h1>
+        <p id="factDisplay">Click the button to get a fact!</p>
+        <button id="factButton">Get Fact</button>
+    </div>
+    
+    <script>
+        const facts = [
+            "Supercars are designed for exceptional performance, with powerful engines, advanced aerodynamics, and lightweight construction.",
+            "They are often produced in limited numbers, making them highly exclusive and sought after by collectors.",
+            "Supercars come with a hefty price tag, often costing hundreds of thousands or even millions of dollars.",
+            "They incorporate cutting-edge technology, including advanced materials like carbon fiber, sophisticated suspension systems, and state-of-the-art electronics.",
+            "Supercars feature aggressive and aerodynamic designs to enhance speed, handling, and downforce.",
+            "They are typically powered by large, high-horsepower engines, often V8s, V10s, or V12s, capable of producing immense power and torque.",
+            "Supercars boast incredible acceleration, often reaching 0 to 60 mph in under 3 seconds.",
+            "They are capable of achieving very high top speeds, often exceeding 200 mph.",
+            "Despite their focus on performance, supercars often feature luxurious interiors with high-quality materials, advanced infotainment systems, and other premium amenities.",
+            "Supercars often become cultural icons, representing the pinnacle of automotive engineering and design."
+        ];
+
+        const factDisplay = document.getElementById('factDisplay');
+        const factButton = document.getElementById('factButton');
+
+        factButton.addEventListener('click', () => {
+            const randomIndex = Math.floor(Math.random() * facts.length);
+            factDisplay.textContent = facts[randomIndex];
+        });
+    </script>
+</body>
+</html>
